@@ -1,0 +1,5 @@
+{
+  "name": "QA-Pro: Yazılım Kalite Güvencesi ve Test Otomasyon Merkezi",
+  "description": "Django ve React tabanlı sistemler için modern test otomasyon mimarisi, raporlama ve CI/CD süreçlerini içeren akademik düzeyde bir yönetim paneli.",
+  "requestFramePermissions": []
+}

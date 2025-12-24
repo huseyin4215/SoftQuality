@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Project fonts and small defaults */
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.code-font {
+    font-family: 'Fira Code', monospace;
+}

@@ -1,0 +1,94 @@
+YMH429 – Yazılım Kalite Güvencesi ve Testi
+2025-2026 Güz Dönemi
+Proje Önerisi
+1.​ Proje Başlığı: LearnExp Veri Toplama Modülü Test Otomasyonu
+2.​ Ekip Üyeleri:
+1
+
+Öğrenci Numarası
+22290202
+
+Adı- Soyadı
+Hüseyin Sarıbuğa
+
+3.​ Projenin Amacı ve Kısa Açıklaması:
+LearnExp adlı akademik içerik toplama sisteminin “Collector Service” modülü için
+sürdürülebilir ve etkili bir Yazılım Kalite Güvencesi (SQA) altyapısı kurmak. LearnExp,
+TÜBİTAK gibi kaynaklardan ve farklı akademik sitelerden veri çekerken Selenium ve
+BeautifulSoup gibi araçları kullanıyor. Fakat Web kazıma süreçleri, hedef sitelerin
+HTML yapısı değiştiğinde ya da ağ sorunları çıktığında kolayca bozulabiliyor. Hatta
+bazen veri formatı bile beklenenden farklı olabiliyor.
+İşte bu yüzden, proje kapsamında dinamik web sitelerinden çekilen verilerin hem
+doğruluğunu hem de bütünlüğünü test eden otomatik bir test çerçevesi
+geliştirilecek.,Bu sistem sadece kod kalitesini değil, veri kalitesini de test edecek.
+Ayrıca geliştirilecek bu yapı, CI/CD süreçlerine entegre edilerek, kaynaklardaki
+herhangi bir değişiklikte geliştiricilere otomatik uyarılar gönderilecek. Böylece hatalar
+daha oluşmadan fark edilebilecek ve sistem daha sürdürülebilir hale gelecek.
+
+4.​ İlgili Çalışmalar (Literatür Taraması): ​
+●​ Web Uygulamalarında Test Otomasyonu ve Selenium : Thooriqoh ve ark. (2020),
+Selenium'un manuel yöntemlere kıyasla test süresini %70 oranında azalttığını
+saptamıştır [1]. Sharma ve Gupta (2025) ise Selenium'un Derin Öğrenme ile entegre
+edilerek dinamik web elementlerini tanımada başarıyla kullanıldığını göstermiştir [2].
+●​ Web Scraping Süreçlerinde : Veri Kalitesi Zyte (2024), veri kalitesinin doğruluk, tamlık
+ve tutarlılık olmak üzere üç temel boyutta ele alınması gerektiğini belirtmiştir [3].
+Hackl (2022), şema doğrulama ve istatistiksel aykırı değer analizinin veri
+bütünlüğünü korumada en etkili yöntemler olduğunu kanıtlamıştır [4].
+●​
+
+Makine Öğrenmesi ile Yazılım Hata Tahmini : Obeidat ve Hammad (2023), hata
+tahmininde en yaygın yöntemlerin SVM ve Random Forest olduğunu belirlemiştir [5].
+Singh ve ark. (2025), Topluluk (Ensemble) öğrenme yöntemlerinin %90 üzeri
+doğrulukla riskli modülleri tespit ederek test eforunu optimize ettiğini raporlamıştır [6].
+
+​
+o​ [1] Thooriqoh, H. A., et al. (2020). "Selenium Framework for Web Automation
+Testing: A Systematic Literature Review." Jurnal Ilmiah Teknologi Informasi.
+
+1
+
+o​ [2] Sharma, A., & Gupta, R. (2025). "A Literature Review on Automation
+Testing Using Selenium and Deep Learning Approaches." International
+Journal of Software Engineering.
+o​ [3] Zyte (2024). "Data Quality Assurance in Web Scraping at Scale." White
+Paper on Web Data Integrity.
+o​ [4] Hackl, P. (2022). "Quality assurance in web scraping of exchange rates
+and financial data." ResearchGate Publication.
+o​ [5] Obeidat, Q., & Hammad, M. (2023). "Software Defects Prediction Using
+Machine Learning Algorithms: A Contemporary Review." Zenodo Research.
+o​ [6] Singh, J., et al. (2025). "Software Defect Prediction Using Traditional
+Machine Learning and Ensemble Learning Algorithms." Smart Wearable
+Technology Journal.​
+
+5.​ Proje Görevleri: ​
+●​ Test Ortamının ve Mimarinin Kurulması:
+Python tabanlı PyTest framework'ü kullanılarak test altyapısının
+oluşturulması.Web kazıma botlarının (Scrapers) izole bir ortamda test
+edilebilmesi için Mock Server (sahte sunucu) yapısının kurulması.
+Böylece testler sırasında gerçek TÜBİTAK sitesine yük bindirilmeden,
+yerel HTML kopyaları üzerinde test koşulacaktır.
+
+●​ Veri Şeması Doğrulama (Schema Validation) Testleri:
+Çekilen verilerin (Makale başlığı, yazar, tarih vb.) beklenen veri
+tiplerine ve formatlarına uygunluğunu kontrol eden Pydantic tabanlı
+doğrulama testlerinin yazılması.
+
+●​ Fonksiyonel Test Otomasyonu (Selenium & Unit Tests):
+LearnExp projesinde kullanılan Selenium botlarının fonksiyonel
+testlerinin yazılması.Hedef web sitesinin yapısı değiştiğinde (örneğin
+bir <div> etiketi <span> olduğunda) testin başarısız olarak rapor
+üretmesinin sağlanması.
+
+●​ Sürekli Entegrasyon (CI) Pipeline Kurulumu:
+GitHub Actions kullanılarak, her kod değişikliğinde (push) testlerin
+otomatik olarak çalıştırılması.Test sonuçlarının ve kapsam (coverage)
+raporlarının otomatik üretilmesi.
+
+●​ Raporlama ve Görselleştirme:
+Test sonuçlarının detaylı analizi için Allure Report entegrasyonunun
+yapılması. Başarılı/başarısız kazıma işlemlerinin grafiksel olarak
+sunulması.
+
+2
+
+
