@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,3 +12,152 @@ body {
 .code-font {
     font-family: 'Fira Code', monospace;
 }
+=======
+
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --bg-main: #f8fafc;
+  --bg-sidebar: #0f172a;
+  --bg-card: #ffffff;
+  --border-color: #e2e8f0;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --text-white: #f8fafc;
+  --success: #22c55e;
+  --error: #ef4444;
+  --warning: #f59e0b;
+  --terminal-bg: #0d1117;
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.app-layout { display: flex; height: 100vh; overflow: hidden; }
+.sidebar { width: 280px; background-color: var(--bg-sidebar); color: #cbd5e1; display: flex; flex-direction: column; border-right: 1px solid #1e293b; }
+.main-view { flex: 1; overflow-y: auto; position: relative; }
+.header { position: sticky; top: 0; z-index: 10; background-color: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+
+/* Utilities - Spacing */
+.p-4 { padding: 1rem; }
+.p-6 { padding: 1.5rem; }
+.p-8 { padding: 2rem; }
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 0.75rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.gap-2 { gap: 0.5rem; }
+.gap-3 { gap: 0.75rem; }
+.gap-4 { gap: 1rem; }
+.gap-6 { gap: 1.5rem; }
+
+/* Tailwind space-y-6 muadili */
+.space-y-4 > * + * { margin-top: 1rem; }
+.space-y-6 > * + * { margin-top: 1.5rem; }
+.space-y-8 > * + * { margin-top: 2rem; }
+
+/* Utilities - Colors & Bg */
+.bg-white { background-color: white; }
+.bg-slate-50 { background-color: var(--slate-50); }
+.bg-slate-900 { background-color: var(--slate-900); }
+.bg-primary { background-color: var(--primary); }
+.text-slate-500 { color: var(--text-muted); }
+.text-slate-600 { color: #475569; }
+.text-slate-800 { color: var(--slate-800); }
+.text-blue-600 { color: var(--primary); }
+.text-green-500 { color: var(--success); }
+.text-red-500 { color: var(--error); }
+
+/* Grid */
+.grid { display: grid; gap: 1rem; }
+.grid-cols-1 { grid-template-columns: 1fr; }
+@media (min-width: 768px) {
+  .md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .md\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+}
+@media (min-width: 1024px) {
+  .lg\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Flex */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+
+/* Borders & Shadows */
+.border { border: 1px solid var(--border-color); }
+.border-b { border-bottom: 1px solid var(--border-color); }
+.rounded-lg { border-radius: 0.5rem; }
+.rounded-xl { border-radius: 0.75rem; }
+.rounded-2xl { border-radius: 1rem; }
+.rounded-full { border-radius: 9999px; }
+.shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+
+/* Typography */
+.text-xs { font-size: 0.75rem; }
+.text-sm { font-size: 0.875rem; }
+.text-lg { font-size: 1.125rem; }
+.text-2xl { font-size: 1.5rem; }
+.font-bold { font-weight: 700; }
+.font-semibold { font-weight: 600; }
+.font-mono { font-family: 'Fira Code', monospace; }
+.uppercase { text-transform: uppercase; }
+.tracking-wider { letter-spacing: 0.05em; }
+
+/* Buttons & Components */
+.card { background: var(--bg-card); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+.btn-nav { width: 100%; display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; border-radius: 8px; border: none; background: transparent; color: #94a3b8; cursor: pointer; transition: all 0.2s; text-align: left; font-weight: 500; }
+.btn-nav:hover { background: #1e293b; color: white; }
+.btn-nav.active { background: var(--primary); color: white; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3); }
+.btn-primary { background: var(--primary); color: white; padding: 0.5rem 1.5rem; border-radius: 8px; border: none; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; transition: background 0.2s; }
+
+/* Badges */
+.badge { padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; }
+.badge-success { background: #dcfce7; color: #15803d; }
+.badge-error { background: #fee2e2; color: #b91c1c; }
+
+/* ANIMASYON SİSTEMİ */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes slideRight { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes zoomIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+
+.animate-in { animation: fadeIn 0.5s ease-out forwards; }
+.slide-in-from-bottom-4 { animation: slideUp 0.5s ease-out forwards; }
+.slide-in-from-right-4 { animation: slideRight 0.5s ease-out forwards; }
+.zoom-in-95 { animation: zoomIn 0.5s ease-out forwards; }
+.duration-500 { animation-duration: 500ms; }
+
+/* Terminal */
+.terminal { background: var(--terminal-bg); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+.terminal-header { background: #1e293b; padding: 0.5rem 1rem; display: flex; justify-content: space-between; align-items: center; }
+.terminal-body { flex: 1; padding: 1rem; font-family: 'Fira Code', monospace; font-size: 0.85rem; overflow-y: auto; color: #cbd5e1; }
+
+/* Custom Gradient */
+.bg-gradient-to-r {
+  background: linear-gradient(to right, #2563eb, #4338ca);
+}
+>>>>>>> 848559c3172931f9e3b3259088c5b6925df13755
