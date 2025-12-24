@@ -98,23 +98,26 @@ npm run preview
 ## 📁 Proje Yapısı
 
 ```
-qa-pro/
-├── src/
-│   ├── components/
-│   │   ├── ArchitectureView.tsx      # Mimari yapı görüntüsü
-│   │   ├── BackendTestsView.tsx      # Backend test yönetimi
-│   │   ├── FrontendTestsView.tsx     # Frontend test yönetimi
-│   │   ├── CicdView.tsx              # CI/CD pipeline takibi
-│   │   ├── ReportsView.tsx           # Test raporları
-│   │   └── TestRunner.tsx            # Test çalıştırıcı
-│   ├── App.tsx                       # Ana uygulama bileşeni
-│   ├── constants.tsx                 # Sabitler
-│   ├── types.ts                      # TypeScript tür tanımları
-│   └── index.tsx                     # Giriş noktası
-├── public/                           # Statik dosyalar
+SoftQuality/
+├── components/                       # React bileşenleri
+│   ├── ArchitectureView.tsx          # Mimari yapı görüntüsü
+│   ├── BackendTestsView.tsx          # Backend test yönetimi
+│   ├── FrontendTestsView.tsx         # Frontend test yönetimi
+│   ├── CicdView.tsx                  # CI/CD pipeline takibi
+│   ├── ReportsView.tsx               # Test raporları
+│   └── TestRunner.tsx                # Test çalıştırıcı
+├── App.tsx                           # Ana uygulama bileşeni
+├── constants.tsx                     # Sabitler ve konfigürasyonlar
+├── types.ts                          # TypeScript tür tanımları
+├── index.tsx                         # React giriş noktası
+├── index.html                        # HTML şablonu
+├── index.css                         # Global stiller
+├── metadata.json                     # Proje metadata'sı
 ├── package.json                      # Proje bağımlılıkları
+├── package-lock.json                 # Bağımlılık lock dosyası
 ├── tsconfig.json                     # TypeScript yapılandırması
-├── vite.config.ts                    # Vite yapılandırması
+├── vite.config.ts                    # Vite derleme yapılandırması
+├── .gitignore                        # Git ignore kuralları
 └── README.md                         # Bu dosya
 ```
 
